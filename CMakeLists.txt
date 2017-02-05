@@ -179,10 +179,10 @@ install(FILES
 # test application
 if(BUILD_TEST)
     set(TEST_SRC src/main.cpp)
-    add_executable(test ${TEST_SRC})
-    add_dependencies(test ${QTERMWIDGET_LIBRARY_NAME})
+    add_executable(qtermwidget-test ${TEST_SRC})
+    add_dependencies(qtermwidget-test ${QTERMWIDGET_LIBRARY_NAME})
     link_directories(${CMAKE_BINARY_DIR})
-    target_link_libraries(test ${QTERMWIDGET_QT_LIBRARIES} ${QTERMWIDGET_LIBRARY_NAME} util)
+    target_link_libraries(qtermwidget-test ${QTERMWIDGET_QT_LIBRARIES} ${QTERMWIDGET_LIBRARY_NAME} util)
 endif (BUILD_TEST)
 # end of test application
 
